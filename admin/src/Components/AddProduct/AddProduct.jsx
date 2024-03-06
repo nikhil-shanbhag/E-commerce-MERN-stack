@@ -42,14 +42,17 @@ const AddProduct = () => {
     if (responseData.success) {
       product.image = responseData.image_url;
       console.log(product);
-      await fetch("https://e-commerce-mern-stack-rafw.onrender.com/addproduct", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(product),
-      })
+      await fetch(
+        "https://e-commerce-mern-stack-rafw.onrender.com/addproduct",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(product),
+        }
+      )
         .then((resp) => resp.json())
         .then((data) => {
           data.success ? alert("Product Added") : alert("Failed");
