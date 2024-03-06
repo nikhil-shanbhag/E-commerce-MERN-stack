@@ -28,7 +28,7 @@ const AddProduct = () => {
     let formData = new FormData();
     formData.append("product", image);
 
-    await fetch("https://e-commerce-mern-stack-rafw.onrender.com/upload", {
+    await fetch("https://e-commerce-mern-stack-jgyf.onrender.com/upload", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -43,7 +43,7 @@ const AddProduct = () => {
       product.image = responseData.image_url;
       console.log(product);
       await fetch(
-        "https://e-commerce-mern-stack-rafw.onrender.com/addproduct",
+        "https://e-commerce-mern-stack-jgyf.onrender.com/addproduct",
         {
           method: "POST",
           headers: {

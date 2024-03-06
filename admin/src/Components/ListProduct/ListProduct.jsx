@@ -6,7 +6,7 @@ const ListProduct = () => {
   const [allproducts, setAllProducts] = useState([]);
 
   const fetchInfo = async () => {
-    await fetch("https://e-commerce-mern-stack-rafw.onrender.com/allproducts")
+    await fetch("https://e-commerce-mern-stack-jgyf.onrender.com/allproducts")
       .then((res) => res.json())
       .then((data) => {
         setAllProducts(data);
@@ -19,7 +19,7 @@ const ListProduct = () => {
 
   const remove_product = async (id) => {
     await fetch(
-      "https://e-commerce-mern-stack-rafw.onrender.com/removeproduct",
+      "https://e-commerce-mern-stack-jgyf.onrender.com/removeproduct",
       {
         method: "POST",
         headers: {
